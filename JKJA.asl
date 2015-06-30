@@ -1,6 +1,6 @@
 state("jasp")
 {
-    bool isLoaded : "jasp.exe", 0x43FCEC;
+    bool isLoaded : "jasp.exe", 0x897B64;
 }
 
 start
