@@ -3,9 +3,10 @@ ASL Scripts for Livesplit
 
 Here you will find all of my scripts I've made for Livesplit!
 
+Bioshock Infinite - Load Removal  
 Metal Gear Rising: Revengeance - Load Removal  
-Star Wars: Jedi Knight: Jedi Academy - Load Removal  
 Resident Evil 5 - Autosplitting (no autostart or end) and Load Removal  
+Star Wars: Jedi Knight: Jedi Academy - Load Removal  
 
 Also hosting scripts for other people:
 
