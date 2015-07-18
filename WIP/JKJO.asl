@@ -1,6 +1,6 @@
 state("jk2sp")
 {
-	int isLoading : "jk2sp.exe", 0xEC34A4;
+	int isLoading : "jk2sp.exe", 0x41D45C;
 }
 
 start
