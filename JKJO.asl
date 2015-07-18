@@ -1,6 +1,6 @@
 state("jk2sp")
 {
-	bool isLoading : "jk2sp.exe", 0xEC34A4;
+	int isLoading : "jk2sp.exe", 0xEC34A4;
 }
 
 start
@@ -17,5 +17,5 @@ split
 
 isLoading
 {
-	return current.isLoading;
+	return current.isLoading != 0;
 }
