@@ -1,6 +1,6 @@
 state("JK")
 {
-	int isLoading : "JK.exe", 0x154A68;
+	int isLoading : "JK.exe", 0x154A78;
 }
 
 start
