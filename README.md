@@ -4,6 +4,7 @@ ASL Scripts for Livesplit
 Here you will find all of my scripts I've made for Livesplit!
 
 Bioshock Infinite - Load Removal  
+Dark Souls II - Load Removal  
 Metal Gear Rising: Revengeance - Load Removal  
 Resident Evil 5 - Autosplitting (no autostart or end) and Load Removal  
 Rune Classic - Load Removal  
