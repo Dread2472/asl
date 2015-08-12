@@ -1,0 +1,5 @@
+5649 ingame 529937 load
+1 ingame 0 load
+16 ingame 17 load
+295030 collision 295050 no collision
+50528513 on ground 50528516 flying
