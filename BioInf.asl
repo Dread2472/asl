@@ -20,5 +20,4 @@ split
 isLoading
 {
 	return current.loadingScreen != 0 || (current.pauseGame == 0 && current.playerControl == 0);
-
 }
