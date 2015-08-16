@@ -8,6 +8,11 @@ state("BioshockInfinite")
 
 start
 {
+	current.split1 = 0;
+	current.split2 = 0;
+	current.split3 = 0;
+	current.split4 = 0;
+	current.split5 = 0;
 	return current.afterLogo == 1 && old.afterLogo == 0;
 }
 
