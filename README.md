@@ -3,7 +3,7 @@ ASL Scripts for Livesplit
 
 Here you will find all of my scripts I've made for Livesplit!
 
-Bioshock Infinite - Load Removal  
+Bioshock Infinite - Autostart and Load Removal  
 Dark Souls - Load Removal  
 Dark Souls II - Load Removal  
 Metal Gear Rising: Revengeance - Load Removal  
