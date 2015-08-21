@@ -11,10 +11,6 @@ start
 	return current.afterLogo == 1 && old.afterLogo == 0;
 }
 
-reset
-{
-}
-
 split
 {
 }
