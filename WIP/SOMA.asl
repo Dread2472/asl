@@ -1,6 +1,6 @@
 state("Soma")
 {
-    string255 mapString : "Soma.exe", 0x7FCD80, 0x198, 0x0;
+	string255 mapString : "Soma.exe", 0x7FCD80, 0x198, 0x0;
 }
 
 state("Soma_NoSteam")
