@@ -26,3 +26,4 @@ init
     timer.IsGameTimePaused = false;
     game.Exited += (s, e) => timer.IsGameTimePaused = true;
 }
+ok
