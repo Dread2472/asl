@@ -1,21 +1,33 @@
-state("DarkSoulsII")
+state("DarkSoulsII", "1.2")
 {
-	bool isLoaded : "DarkSoulsII.exe", 0x114A58C, 0x300, 0x65c, 0x64, 0x9c;
+	int Loading : 0xFF9290, 0x108, 0xf8, 0x4, 0x1c0;
 }
 
-start
+state("DarkSoulsII", "1.11")
 {
+	int Loading : 0x114A58C, 0x300, 0x65c, 0x64, 0x9c;
 }
 
-reset
+init
 {
-}
-
-split
-{
+    switch (modules.First().FileVersionInfo.FileVersion) {
+        case "1,0,2,0":
+            version = "1.2";
+            break;
+		case "1,0,11,0":
+			version = "1.11";
+			break;
+    }
+	print("version: " + version); // bottom of init
+	print(modules.First().FileVersionInfo.FileVersion);
 }
 
 isLoading
 {
-	return !current.isLoaded;
+	if (version == "1.2") {
+		return current.Loading == 1;
+	} else {
+		return current.Loading == 0;
+	}
 }
+
