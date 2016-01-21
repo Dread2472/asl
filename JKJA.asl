@@ -1,7 +1,7 @@
 state("jasp")
 {
     bool isLoaded : "jasp.exe", 0x897C9C;
-    bool finalSplit : "jasp.exe", 0x4421D4;
+    bool finalSplit : "jasp.exe", 0x835AB4;
     int mapNumber : "jasp.exe", 0x480CD0;
 }
 
