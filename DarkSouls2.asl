@@ -10,7 +10,7 @@ state("DarkSoulsII", "1.11")
 
 init
 {
-    switch (modules.First().FileVersionInfo.FileVersion) {
+	switch (modules.First().FileVersionInfo.FileVersion) {
 		case "1,0,2,0":
 			version = "1.2";
 			break;
@@ -18,8 +18,6 @@ init
 			version = "1.11";
 			break;
     }
-	print("version: " + version); // bottom of init
-	print(modules.First().FileVersionInfo.FileVersion);
 }
 
 isLoading
