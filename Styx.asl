@@ -1,21 +1,9 @@
 state("StyxGame")
 {
-    bool isLoading : "StyxGame.exe", 0x2AA9D2C;
-}
-
-start
-{
-}
-
-reset
-{
-}
-
-split
-{
+	bool isLoading : 0x2AA9D2C;
 }
 
 isLoading
 {
-    return current.isLoading;
+	return current.isLoading;
 }

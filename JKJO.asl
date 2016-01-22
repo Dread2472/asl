@@ -1,18 +1,6 @@
 state("jk2sp")
 {
-	int isLoading : "jk2sp.exe", 0x41D45C;
-}
-
-start
-{
-}
-
-reset
-{
-}
-
-split
-{
+	int isLoading : 0x41D45C;
 }
 
 isLoading

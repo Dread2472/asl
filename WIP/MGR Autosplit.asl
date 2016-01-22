@@ -1,17 +1,9 @@
 state("METAL GEAR RISING REVENGEANCE")
 {
-    bool playerControl : "METAL GEAR RISING REVENGEANCE.exe", 0x148DD2C;
-    bool isLoading : "METAL GEAR RISING REVENGEANCE.exe", 0x14B9200;
-    string9 gameString : "METAL GEAR RISING REVENGEANCE.exe", 0x14B9181;
-    int raidenAnimation : "METAL GEAR RISING REVENGEANCE.exe", 0x019C14C4, 0x788, 0x618;
-}
-
-start
-{
-}
-
-reset
-{
+	bool    playerControl   : 0x148DD2C;
+	bool    isLoading       : 0x14B9200;
+	string9 gameString      : 0x14B9181;
+	int     raidenAnimation : 0x019C14C4, 0x788, 0x618;
 }
 
 split
@@ -36,5 +28,5 @@ split
 
 isLoading
 {
-    return current.isLoading && !current.playerControl;
+	return current.isLoading && !current.playerControl;
 }
