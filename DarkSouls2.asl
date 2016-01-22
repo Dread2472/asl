@@ -17,7 +17,7 @@ init
 		case "1,0,11,0":
 			version = "1.11";
 			break;
-    }
+	}
 }
 
 isLoading
