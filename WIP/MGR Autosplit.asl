@@ -1,40 +1,38 @@
 state("METAL GEAR RISING REVENGEANCE")
 {
-    bool playerControl : "METAL GEAR RISING REVENGEANCE.exe", 0x148DD2C;
-    bool isLoading : "METAL GEAR RISING REVENGEANCE.exe", 0x14B9200;
-    string9 gameString : "METAL GEAR RISING REVENGEANCE.exe", 0x14B9181;
-    int raidenAnimation : "METAL GEAR RISING REVENGEANCE.exe", 0x019C14C4, 0x788, 0x618;
-}
-
-start
-{
-}
-
-reset
-{
+	bool    control   : 0x148DD2C; // player control
+	bool    load      : 0x14B9200; // is loading
+    	bool    ray1      : 0x1B21820; // Ray 1 split
+    	int     ray2      : 0x1E5A508, 0x4, 0x3ac, 0x4; // Ray 2 split
+	string9 gStr      : 0x14B9181; // game location string
+    	string9 gStr2	  : 0x14B91AD; // game location string 2
+    	string4 gStr3     : 0x14B9231; // game location string 3
+	int     rAnim     : 0x019C14C4, 0x788, 0x618; // Raiden's current animation
 }
 
 split
 {
-	return current.gameString == "ay_ev" && old.gameString == "ay01" ||          /* Metal Gear Ray 1 Split */
-	       current.gameString == "" && old.gameString == "ay02_3" ||             /* Metal Gear Ray 2 Split */
-	       current.gameString == "" && old.gameString == "am_03" ||              /* Sam 1 Split */
-	       current.gameString == "IN" && old.gameString == "WOLF" ||             /* Bladewolf Split */
-	       current.gameString == "HELI01_EN" && old.gameString == "HELI01" ||    /* Hammerhead Split */
-	       current.gameString == "MIST_RESU" && old.gameString == "MISTRAL03" || /* Mistral Split */
-	       current.gameString == "BOSS_END" && old.gameString == "ROBO_STAR" ||  /* GRAD Split */
-	       current.gameString == "START" && old.gameString == "2ND" ||           /* Roof Skip Split */
-	       current.gameString == "MON_RESUL" && old.gameString == "FINISH_QT" || /* Monsoon Split */
-	       current.gameString == "END" && old.gameString == "OUTER_WAL" ||       /* Wall Run Split */
-	       current.gameString == "BTL_END" && old.gameString == "MON" ||         /* Mistral + Monsoon Refight Split */
-	       current.gameString == "SUN_RESUL" && old.gameString == "QTE" ||       /* Sundowner Split */
-	       current.gameString == "" && old.gameString == "STREET" ||             /* Escape Split */
-	       current.gameString == "BOSS_END" && old.gameString == "BOSS" ||       /* Sam 2 Split */
-	       current.gameString == "RESULT" && old.gameString == "QTE" ||          /* Metal Gear Excelsus Split */
-	       current.raidenAnimation == 297 && old.raidenAnimation == 70;          /* Armstrong Split */
+	return current.gStr == "ay01" && current.ray1 && !old.ray1  ||    					 /* Metal Gear Ray 1 Split */
+	       current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3  ||   				 /* Metal Gear Ray 2 Split */
+	       current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||          			 /* Sam 1 Split */
+	       current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE"  ||  /* Bladewolf Split */
+	       current.gStr == "HOTEL_IN" && old.gStr == "HOTEL_BTL" ||    					 /* Hotel Split */
+	       current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" || 					 /* Mistral Split */
+	       current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* Sewer Split */
+               current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* R02 split */
+	       current.gStr == "ELV_IN" && old.gStr == "OFFICE" ||      					 /* Elevator Split */
+               current.gStr == "START"  && old.gStr == "SUBWAY" ||           					 /* Roof Skip Split */
+	       current.gStr == "MON_RESUL" && old.gStr == "FINISH_QT" || 					 /* Monsoon Split */
+               current.gStr == "GATE_END" && old.gStr == "GATE_OPEN" ||  					 /* Offices Split */
+	       current.gStr3 == "END" && old.gStr3 == "RIDE"  ||       						 /* Freight Elevator Split */
+	       current.gStr == "SUN_RESUL" && old.gStr == "QTE" ||       					 /* Sundowner Split */
+	       current.gStr == "" && old.gStr == "STREET" ||             					 /* Escape Split */
+	       current.gStr == "BOSS_END" && old.gStr == "BOSS" ||       					 /* Sam 2 Split */
+	       current.gStr == "QTE" && (old.rAnim == 70 || old.rAnim == 266) && current.rAnim == 264 ||         /* Metal Gear Excelsus Split */
+	       current.rAnim == 297 && old.rAnim == 70;          						 /* Armstrong Split */
 }
 
 isLoading
 {
-    return current.isLoading && !current.playerControl;
+	return current.load && !current.control;
 }
