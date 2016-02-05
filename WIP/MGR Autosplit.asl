@@ -20,7 +20,7 @@ split
 	       current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" || 					 /* Mistral Split */
 	       current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* Sewer Split */
                current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* R02 split */
-	       current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV") ||      			 /* Elevator Split */
+	       current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV" || old.gStr == "ELV_END") ||      			 /* Elevator Split */
                current.gStr == "START"  && old.gStr == "SUBWAY" ||           					 /* Roof Skip Split */
 	       current.gStr == "MON_RESUL" && old.gStr == "FINISH_QT" || 					 /* Monsoon Split */
                current.gStr == "GATE_END" && old.gStr == "GATE_OPEN" ||  					 /* Offices Split */
