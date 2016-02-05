@@ -16,11 +16,11 @@ split
 	       current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3  ||   				 /* Metal Gear Ray 2 Split */
 	       current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||          			 /* Sam 1 Split */
 	       current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE"  ||  /* Bladewolf Split */
-	       current.gStr == "HOTEL_IN" && old.gStr == "HOTEL_BTL" ||    					 /* Hotel Split */
+	       (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||  		 /* Hotel Split */
 	       current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" || 					 /* Mistral Split */
 	       current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* Sewer Split */
                current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||  		 /* R02 split */
-	       current.gStr == "ELV_IN" && old.gStr == "OFFICE" ||      					 /* Elevator Split */
+	       current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV") ||      			 /* Elevator Split */
                current.gStr == "START"  && old.gStr == "SUBWAY" ||           					 /* Roof Skip Split */
 	       current.gStr == "MON_RESUL" && old.gStr == "FINISH_QT" || 					 /* Monsoon Split */
                current.gStr == "GATE_END" && old.gStr == "GATE_OPEN" ||  					 /* Offices Split */
