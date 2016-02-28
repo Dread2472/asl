@@ -58,7 +58,7 @@ start
 	}
 	else if (current.gStr == "1" && current.load) {
 		timer.Run.Offset = new TimeSpan(39100000);
-	        return true;
+	    return true;
 	}
 }
 split
@@ -69,7 +69,7 @@ split
            settings["R00"] && current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||
            settings["Blade Wolf"] && current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE" ||
            settings["Hammerhead"] && (current.gStr == "SET" || current.gStr == "START") && old.gStr == "HELI01_END" ||
-           settings["Gate"] && current.gStr == "DOOR_CHECK" && old.gStr == "IN" ||
+           settings["Gate"] && current.gStr == "DOOR_CHEC" && old.gStr == "IN" ||
            settings["Hotel"] && (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||
            settings["Mistral"] && current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" ||
            settings["Sewers"] && current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||
