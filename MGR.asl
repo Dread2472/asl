@@ -64,33 +64,33 @@ start
 split
 {
 	return settings["Ray 1"] && current.gStr == "ay01" && current.ray1 && !old.ray1 ||
-        settings["Ray 2"] && current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3 ||
-        settings["Sam 1"] && current.gStr == "" && old.gStr == "am_3" ||
-        settings["R00"] && current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||
-        settings["Blade Wolf"] && current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE" ||
-        settings["Hammerhead"] && (current.gStr == "SET" || current.gStr == "START") && old.gStr == "HELI01_END" ||
-        settings["Gate"] && current.gStr == "DOOR_CHECK" && old.gStr == "IN" ||
-        settings["Hotel"] && (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||
-        settings["Mistral"] && current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" ||
-        settings["Sewer"] && current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||
-        settings["GRAD"] && current.gStr == "BOSS_END" && old.gStr == "ROBO_START" ||
-        settings["R02"] && current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||
-        settings["Doktor Elevator"] && current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV" || old.gStr == "ELV_END") ||
-        settings["Railroad Skip"] && current.gStr == "START"  && old.gStr == "SUBWAY" ||
-        settings["Monsoon"] && current.gStr == "MON_RESUL" && old.gStr == "FINISH_QT" ||
-        settings["Offices"] && current.gStr == "GATE_END" && old.gStr == "GATE_OPEN" ||
-        settings["Wallrun"] && current.gStr == "END" && old.gStr == "OUTER_WAL" ||
-        settings["Freight Elevator"] && current.gStr3 == "END" && old.gStr3 == "RIDE"  ||
-        settings["Clone Fight"] && current.gStr == "BTL_END" && old.gStr == "MON" ||
-        settings["Sundowner"] && current.gStr == "SUN_RESUL" && old.gStr == "QTE" || 
-        settings["R05"] && current.gStr == "" && old.gStr == "STREET" ||
-        settings["Sam 2"] && current.gStr == "BOSS_END" && old.gStr == "BOSS" ||
-        settings["Excelsus"] && current.gStr == "QTE" && (old.rAnim == 70 || old.rAnim == 266) && current.rAnim == 264 ||
-        settings["Armstrong"] && current.rAnim == 297 && old.rAnim == 70 ||
-        settings["Samwolf"] && current.gStr == "WOLF_END" && old.gStr != current.gStr ||
-        settings["Samray"] && current.gStr == "RAY_END" && old.gStr == "RAY_RESUL" ||
-        settings["Samvator"] && current.gStr == "START" && old.gStr == "ELV_END" ||
-        settings["Samstrong"] && current.gStr == "QTE" && current.samStrong == 2 && old.samStrong == 1;
+		   settings["Ray 2"] && current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3 ||
+           settings["Sam 1"] && current.gStr == "" && old.gStr == "am_3" ||
+           settings["R00"] && current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||
+           settings["Blade Wolf"] && current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE" ||
+           settings["Hammerhead"] && (current.gStr == "SET" || current.gStr == "START") && old.gStr == "HELI01_END" ||
+           settings["Gate"] && current.gStr == "DOOR_CHECK" && old.gStr == "IN" ||
+           settings["Hotel"] && (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||
+           settings["Mistral"] && current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" ||
+           settings["Sewer"] && current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||
+           settings["GRAD"] && current.gStr == "BOSS_END" && old.gStr == "ROBO_START" ||
+           settings["R02"] && current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||
+           settings["Doktor Elevator"] && current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV" || old.gStr == "ELV_END") ||
+           settings["Railroad Skip"] && current.gStr == "START"  && old.gStr == "SUBWAY" ||
+           settings["Monsoon"] && current.gStr == "MON_RESUL" && old.gStr == "FINISH_QT" ||
+           settings["Offices"] && current.gStr == "GATE_END" && old.gStr == "GATE_OPEN" ||
+           settings["Wallrun"] && current.gStr == "END" && old.gStr == "OUTER_WAL" ||
+           settings["Freight Elevator"] && current.gStr3 == "END" && old.gStr3 == "RIDE"  ||
+           settings["Clone Fight"] && current.gStr == "BTL_END" && old.gStr == "MON" ||
+           settings["Sundowner"] && current.gStr == "SUN_RESUL" && old.gStr == "QTE" || 
+           settings["R05"] && current.gStr == "" && old.gStr == "STREET" ||
+           settings["Sam 2"] && current.gStr == "BOSS_END" && old.gStr == "BOSS" ||
+           settings["Excelsus"] && current.gStr == "QTE" && (old.rAnim == 70 || old.rAnim == 266) && current.rAnim == 264 ||
+           settings["Armstrong"] && current.rAnim == 297 && old.rAnim == 70 ||
+           settings["Samwolf"] && current.gStr == "WOLF_END" && old.gStr != current.gStr ||
+           settings["Samray"] && current.gStr == "RAY_END" && old.gStr == "RAY_RESUL" ||
+           settings["Samvator"] && current.gStr == "START" && old.gStr == "ELV_END" ||
+           settings["Samstrong"] && current.gStr == "QTE" && current.samStrong == 2 && old.samStrong == 1;
 }
 
 isLoading
