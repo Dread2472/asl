@@ -72,7 +72,7 @@ split
            settings["Gate"] && current.gStr == "DOOR_CHECK" && old.gStr == "IN" ||
            settings["Hotel"] && (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||
            settings["Mistral"] && current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" ||
-           settings["Sewer"] && current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||
+           settings["Sewers"] && current.gStr == "FIND_GATE" && current.rAnim != old.rAnim && current.rAnim == 43 ||
            settings["GRAD"] && current.gStr == "BOSS_END" && old.gStr == "ROBO_START" ||
            settings["R02"] && current.gStr == "EVENT2" && current.rAnim != old.rAnim && current.rAnim == 43 ||
            settings["Doktor Elevator"] && current.gStr == "ELV_IN" && (old.gStr == "OFFICE" || old.gStr == "ELV" || old.gStr == "ELV_END") ||
