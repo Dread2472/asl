@@ -64,11 +64,11 @@ start
 split
 {
 	return settings["Ray 1"] && current.gStr == "ay01" && current.ray1 && !old.ray1 ||
-		   settings["Ray 2"] && current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3 ||
+           settings["Ray 2"] && current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3 ||
            settings["Sam 1"] && current.gStr == "" && old.gStr == "am_3" ||
            settings["R00"] && current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||
            settings["Blade Wolf"] && current.gStr == "WOLF"  && current.rAnim == 35 && old.rAnim == 33 && current.gStr3 != "STRE" ||
-           settings["Hammerhead"] && (current.gStr == "SET" || current.gStr == "START") && old.gStr == "HELI01_END" ||
+           settings["Hammerhead"] && (current.gStr == "SET" || current.gStr == "START") && old.gStr == "HELI01_EN" ||
            settings["Gate"] && current.gStr == "DOOR_CHEC" && old.gStr == "IN" ||
            settings["Hotel"] && (current.gStr == "HOTEL_IN" || current.gStr == "START") && old.gStr == "HOTEL_BTL" ||
            settings["Mistral"] && current.gStr == "MIST_RESU" && old.gStr == "MISTRAL03" ||
