@@ -24,8 +24,9 @@ isLoading
 init
 {
 	timer.IsGameTimePaused = false;
-	exit
-    {
-        timer.IsGameTimePaused = true;
-    }
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
 }
