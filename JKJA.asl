@@ -7,8 +7,13 @@ state("jasp")
 
 split
 {
-	return (old.mapNumber != current.mapNumber && current.mapNumber > 2 && old.mapNumber == 0) ||
+	return (old.mapNumber != current.mapNumber && current.mapNumber > 2 && old.mapNumber == 0 && current.mapNumber != 24) ||
 	       (current.mapNumber == 78 && current.finalSplit);
+}
+
+reset
+{
+    return current.mapNumber == 24 && old.mapNumber != 24;
 }
 
 isLoading
@@ -19,5 +24,8 @@ isLoading
 init
 {
 	timer.IsGameTimePaused = false;
-	game.Exited += (s, e) => timer.IsGameTimePaused = true;
+	exit
+    {
+        timer.IsGameTimePaused = true;
+    }
 }
