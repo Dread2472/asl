@@ -5,7 +5,7 @@ state("jk2sp")
 	int map            :  0x5E6098;
 	int desannHealth   :  "jk2gamex86.dll", 0x26CF78, 0x218;
 	int start          :  0x40D370;
-	string9 mapString  :  0xCB3208;
+	string9 mapString  :  0x4226F9;
 }
 
 start
