@@ -63,7 +63,7 @@ start
 }
 split
 {
-	return settings["Ray 1"] && current.gStr == "ay01" && current.ray1 && !old.ray1 ||
+    return settings["Ray 1"] && current.gStr == "ay01" && current.ray1 && !old.ray1 ||
            settings["Ray 2"] && current.gStr == "ay02_3" && current.ray2 == 5 && old.ray2 == 3 ||
            settings["Sam 1"] && current.gStr == "" && old.gStr == "am_3" ||
            settings["R00"] && current.gStr2 == "BEACH" && old.gStr2 == "" && current.gStr == "" ||
@@ -95,11 +95,11 @@ split
 
 isLoading
 {
-	return current.load && !current.control;
+    return current.load && !current.control;
 }
 init
 {
-	timer.IsGameTimePaused = false;
+    timer.IsGameTimePaused = false;
 }
 
 exit
