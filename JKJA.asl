@@ -11,6 +11,11 @@ split
 	       (current.mapNumber == 78 && current.finalSplit);
 }
 
+start
+{
+	return (current.isLoaded && !old.isLoaded) && current.mapNumber == 24;
+}
+
 reset
 {
     return current.mapNumber == 24 && old.mapNumber != 24;
