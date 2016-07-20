@@ -17,3 +17,13 @@ isLoading
 {
 	return current.loadingScreen != 0 || (current.pauseGame == 0 && current.pauseGame2 == 0 && current.pauseGame3 == 0 && current.playerControl == 0);
 }
+
+init
+{
+    timer.IsGameTimePaused = false;
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
+}

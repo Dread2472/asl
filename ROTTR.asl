@@ -9,3 +9,13 @@ isLoading
 {
     return current.ingameCutscene || current.isLoading;
 }
+
+init
+{
+    timer.IsGameTimePaused = false;
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
+}
