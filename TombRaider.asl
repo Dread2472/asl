@@ -1,6 +1,6 @@
 state("TombRaider")
 {
-    bool FMV             : "ole32.dll", 0x147278;
+    bool FMV             : "binkw32.dll", 0x2830C;
     byte ingameCutscene  : 0x1FD1840;
     bool isLoading       : 0x1E33250;
 }
