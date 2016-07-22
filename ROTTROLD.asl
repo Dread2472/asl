@@ -1,13 +1,14 @@
 state("ROTTR")
 {
-    bool ingameCutscene : 0x27D5EBC;
-    bool isLoading      : 0xEF49E0;
+    int  ingameCutscene : 0x281D608;
+    bool isLoading      : 0xF25FB8;
+    bool FMV            : 0x20E42DC;
 }
 
 
 isLoading
 {
-    return current.ingameCutscene || current.isLoading;
+    return current.ingameCutscene != 0 || current.isLoading || current.FMV;
 }
 
 init
