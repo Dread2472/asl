@@ -25,3 +25,13 @@ isLoading
 {
     return current.isLoading;
 }
+
+init
+{
+    timer.IsGameTimePaused = false;
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
+}
