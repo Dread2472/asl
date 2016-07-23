@@ -1,6 +1,6 @@
 state("JK")
 {
-	bool      isLoading  : 0x154A68;
+    bool      isLoading  : 0x154A68;
     string11  level      : 0x43599C;
 }
 
