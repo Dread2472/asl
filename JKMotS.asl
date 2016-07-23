@@ -1,6 +1,6 @@
 state("JK")
 {
-	bool      isLoading  : 0x1A3200;
+    bool      isLoading  : 0x1A3200;
     string9   level      : 0x523AC5;
 }
 
@@ -16,5 +16,5 @@ split
 
 isLoading
 {
-	return current.isLoading;
+    return current.isLoading;
 }
