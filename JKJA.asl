@@ -23,12 +23,12 @@ reset
 
 isLoading
 {
-	return !current.isLoaded;
+    return !current.isLoaded;
 }
 
 init
 {
-	timer.IsGameTimePaused = false;
+    timer.IsGameTimePaused = false;
 }
 
 exit

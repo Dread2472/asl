@@ -11,7 +11,7 @@ start
 
 split
 {
-    return current.level != old.level;
+    return current.level != old.level && current.level != "01narshadda";
 }
 
 isLoading
