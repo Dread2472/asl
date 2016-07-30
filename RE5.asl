@@ -19,7 +19,7 @@ start
 
 split
 {
-	return (current.levelNumber != old.levelNumber);
+	return (current.levelNumber > old.levelNumber);
 }
 
 isLoading
