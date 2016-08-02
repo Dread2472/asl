@@ -1,3 +1,4 @@
+
 state("DarkSoulsII", "1.2")
 {
 	int Loading : 0xFF9290, 0x108, 0xf8, 0x4, 0x1c0;
@@ -18,12 +19,14 @@ init
 	int moduleSize = modules.First().ModuleMemorySize;
 	switch (moduleSize) {
 		case 34299904:
+		case 34361344://JP SOFTS
 			version = "SOTFS";
 			break;
 		case 20176896:
 			version = "1.2";
 			break;
 		case 33902592:
+		case 33927168://JP DS2
 			version = "1.11";
 			break;
 	}
@@ -38,4 +41,3 @@ isLoading
 		return current.Loading == 1;
 	}
 }
-
