@@ -39,15 +39,18 @@ init
 		case 34361344://JP SOFTS
 			version = "JPSOTFS";
 			break;
-		case 20176896:
-			version = "1.2";
-			break;
 		case 33902592:
        		version = "1.11";
 			break;
 		case 33927168://JP DS2
 			version = "JP1.11";
 			break;
+        case 20176896:
+			version = "1.2";
+			break;
+        default:
+            version = "JP1.2";
+            break;
 	}
 	print(modules.First().ModuleMemorySize.ToString());
 }
