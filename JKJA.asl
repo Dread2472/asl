@@ -1,19 +1,27 @@
 state("jasp")
 {
-	bool isLoaded   : 0x897C9C;
-	bool finalSplit : 0x835AB4;
-	int  mapNumber  : 0x480CD0;
+    bool isLoaded   : 0x897C9C;
+    bool finalSplit : 0x835AB4;
+    int  mapNumber  : 0x480CD0;
+    bool ILSplit    : 0x43AFFC;
+    bool isCutsceneSkipped : 0x493390;
+}
+
+startup
+{
+    settings.Add("ILT", false, "IL Timer");
+    settings.Add("dumbstart", false, "Start time on end of loadscreen");
 }
 
 split
 {
-	return (old.mapNumber != current.mapNumber && current.mapNumber > 2 && old.mapNumber == 0 && current.mapNumber != 24) ||
-	       (current.mapNumber == 78 && current.finalSplit);
+    return (old.mapNumber != current.mapNumber) && ((current.mapNumber > 2 && old.mapNumber == 0 && current.mapNumber != 24) || settings["ILT"]) 
+           || (current.mapNumber == 78 && current.finalSplit) || (settings["ILT"] && current.ILSplit);
 }
 
 start
 {
-	return (current.isLoaded && !old.isLoaded) && current.mapNumber == 24;
+    return ((current.isLoaded && !old.isLoaded) && (current.mapNumber == 24 || settings["dumbstart"]));
 }
 
 reset
@@ -23,15 +31,11 @@ reset
 
 isLoading
 {
-    return !current.isLoaded;
+    return !current.isLoaded || (current.isCutsceneSkipped && settings["ILT"]);
 }
 
 init
 {
     timer.IsGameTimePaused = false;
-}
-
-exit
-{
-    timer.IsGameTimePaused = true;
+    game.Exited += (s, e) => timer.IsGameTimePaused = true;
 }
