@@ -4,7 +4,7 @@ state("jasp")
     bool finalSplit : 0x835AB4;
     int  mapNumber  : 0x480CD0;
     bool ILSplit    : 0x43AFFC;
-    bool isCutsceneSkipped : 0x493390;
+    bool isCutsceneSkipped : 0x43B121;
 }
 
 startup
