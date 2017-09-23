@@ -6,6 +6,14 @@ state("JKM")
     byte      reset      : 0x188FDC;
 }
 
+state("JediKnightM")
+{
+    bool      isLoading  : 0x1A3200;
+    string9   level      : 0x523AC5;
+    bool      start      : 0x4D8020;
+    byte      reset      : 0x188FDC;
+}
+
 start
 {
     return (current.level == "RebelBase" || current.level == "rebelbase") && !current.start && old.start;
