@@ -4,6 +4,12 @@ state("JK")
     string11  level      : 0x43599C;
 }
 
+state("JediKnight")
+{
+    bool      isLoading  : 0x154A68;
+    string11  level      : 0x43599C;
+}
+
 start
 {
     return current.level == "01narshadda" && old.isLoading && !current.isLoading;
