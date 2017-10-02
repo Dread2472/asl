@@ -4,7 +4,7 @@ state("JKM")
     string9   level      : 0x523AC5;
     bool      start      : 0x4D8020;
     byte      reset      : 0x188FDC;
-	bool      credits    : 0x1B6554;
+    bool      credits    : 0x1B6554;
 }
 
 state("JediKnightM")
@@ -13,7 +13,7 @@ state("JediKnightM")
     string9   level      : 0x523AC5;
     bool      start      : 0x4D8020;
     byte      reset      : 0x188FDC;
-	bool      credits    : 0x1B6554;
+    bool      credits    : 0x1B6554;
 }
 
 start
