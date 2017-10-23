@@ -36,13 +36,13 @@ init
 		case 34299904:
        		version = "SOTFS";
 			break;
-		case 34361344://JP SOFTS
+		case 34361344:
 			version = "JPSOTFS";
 			break;
 		case 33902592:
        		version = "1.11";
 			break;
-		case 33927168://JP DS2
+		case 33927168:
 			version = "JP1.11";
 			break;
         case 20176896:
