@@ -22,7 +22,7 @@ start
 split
 {
     return (current.Chapter > old.Chapter && current.Chapter < 18 && current.Chapter > 1) ||
-           (current.x == 1193450501 && old.x != 1193450501 && current.y == 3336200889 && old.y != 3336200889);
+           (current.x == 1193450501 && old.x != 1193450501 && current.y == 3336200889 && old.y != 3336200889 && current.Chapter == 17);
 }
 
 isLoading
