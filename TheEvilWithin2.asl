@@ -34,7 +34,7 @@ isLoading
            current.LoadingCutscene == 1 ||
            current.Chapter < 1 ||
            current.Chapter > 17 ||
-           (current.z < -4300.0 && current.z > -4400.0)
+           (current.z < -4300.0 && current.z > -4400.0 && current.Chapter != 1)
            ;
 }
 
