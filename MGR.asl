@@ -8,7 +8,7 @@ state("METAL GEAR RISING REVENGEANCE")
 	string9 gStr2	  : 0x14B91AD; // game location string 2
 	string4 gStr3     : 0x14B9231; // game location string 3
 	int     rAnim     : 0x019C14C4, 0x788, 0x618; // Raiden's current animation
-	int     samStrong : 0x19D9754 // Armstrong split for Sam DLC
+	int     samStrong : 0x19D9754; // Armstrong split for Sam DLC
 }
 startup
 {
@@ -37,7 +37,7 @@ startup
 		"Sundowner",
 		"R05",
 		"Sam 2",
-		"Excelsus", 
+		"Excelsus",
 		"Armstrong",
 	};
 	settings.CurrentDefaultParent = "Main Game";
@@ -82,7 +82,7 @@ split
            settings["Wallrun"] && current.gStr == "END" && old.gStr == "OUTER_WAL" ||
            settings["Freight Elevator"] && current.gStr3 == "END" && old.gStr3 == "RIDE"  ||
            settings["Clone Fight"] && current.gStr == "BTL_END" && old.gStr == "MON" ||
-           settings["Sundowner"] && current.gStr == "SUN_RESUL" && old.gStr == "QTE" || 
+           settings["Sundowner"] && current.gStr == "SUN_RESUL" && old.gStr == "QTE" ||
            settings["R05"] && current.gStr == "" && old.gStr == "STREET" ||
            settings["Sam 2"] && current.gStr == "BOSS_END" && old.gStr == "BOSS" ||
            settings["Excelsus"] && current.gStr == "QTE" && (old.rAnim == 70 || old.rAnim == 266) && current.rAnim == 264 ||
