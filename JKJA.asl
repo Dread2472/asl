@@ -1,8 +1,30 @@
-state("jasp")
+state("jasp", "Vanilla")
 {
 	bool isLoaded   : 0x897C9C;
 	bool finalSplit : 0x835AB4;
 	int  mapNumber  : 0x480CD0;
+}
+
+state("jasp", "Speed Academy")
+{
+	bool isLoaded   : 0x56050C;
+	bool finalSplit : 0x6FED9C;
+	int  mapNumber  : 0x552AD8;
+}
+
+init
+{
+	if (game.MainModule.ModuleMemorySize == 14618624 ||
+		game.MainModule.FileVersionInfo.ProductName == "Speed Academy")
+	{
+		version = "Speed Academy";
+	}
+	else
+	{
+		version = "Vanilla";
+	}
+
+	timer.IsGameTimePaused = false;
 }
 
 split
@@ -24,11 +46,6 @@ reset
 isLoading
 {
     return !current.isLoaded;
-}
-
-init
-{
-    timer.IsGameTimePaused = false;
 }
 
 exit
