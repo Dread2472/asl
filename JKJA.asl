@@ -12,12 +12,27 @@ state("jasp", "Speed Academy")
 	int  mapNumber  : 0x552AD8;
 }
 
+state("jasp", "Speed Academy v0.9")
+{
+	bool isLoaded   : 0x54B48C;
+	bool finalSplit : 0x5E9058;
+	int  mapNumber  : 0x53DAA8;
+}
+
 init
 {
 	if (game.MainModule.ModuleMemorySize == 14618624 ||
-		game.MainModule.FileVersionInfo.ProductName == "Speed Academy")
+	    game.MainModule.FileVersionInfo.ProductName == "Speed Academy")
 	{
-		version = "Speed Academy";
+		if (game.MainModule.FileVersionInfo.FileMajorPart >= 0 &&
+		    game.MainModule.FileVersionInfo.FileMinorPart >= 9)
+		{
+			version = "Speed Academy v0.9";
+		}
+		else
+		{
+			version = "Speed Academy";
+		}
 	}
 	else
 	{
