@@ -34,23 +34,23 @@ init
 	int moduleSize = modules.First().ModuleMemorySize;
 	switch (moduleSize) {
 		case 34299904:
-       		version = "SOTFS";
+			version = "SOTFS";
 			break;
 		case 34361344:
 			version = "JPSOTFS";
 			break;
 		case 33902592:
-       		version = "1.11";
+			version = "1.11";
 			break;
 		case 33927168:
 			version = "JP1.11";
 			break;
-        case 20176896:
+		case 20176896:
 			version = "1.2";
 			break;
-        default:
-            version = "JP1.2";
-            break;
+		default:
+			version = "JP1.2";
+			break;
 	}
 	print(modules.First().ModuleMemorySize.ToString());
 }
