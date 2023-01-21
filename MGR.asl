@@ -53,11 +53,11 @@ startup
 start
 {
 	if (current.gStr2 == "1_start" && old.gStr2 == "START") {
-		timer.Run.Offset = new TimeSpan(9100000);
+		timer.Run.Offset = new TimeSpan(4600000);
 		return true;
 	}
 	else if (current.gStr == "1" && current.load) {
-		timer.Run.Offset = new TimeSpan(39100000);
+		timer.Run.Offset = new TimeSpan(45600000);
 	    return true;
 	}
 }
