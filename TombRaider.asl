@@ -5,7 +5,7 @@ state("TombRaider", "[Steam] 0.0")
     bool isLoading       : 0x1CF7FE0;
 }
 
-state("TombRaider", "[Epic Games] 838.0")
+state("TombRaider", "[Epic Games] 0.0")
 {
     bool FMV             : "binkw32.dll", 0x2830C;
     int  ingameCutscene  : 0x20C7DBC;
